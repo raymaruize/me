@@ -1,53 +1,53 @@
 /* ========================================
-   CMU 15-113 Portfolio Website - JavaScript
-   AI Usage: Code structure and logic assisted by AI tools
+   Apple-Inspired Portfolio - JavaScript
+   Smooth interactions and animations
    ======================================== */
 
 // ==========================================
-// 1. Auto-Update Year in Footer
-// ==========================================
-document.addEventListener('DOMContentLoaded', function () {
-    const yearElement = document.getElementById('year');
-    yearElement.textContent = new Date().getFullYear();
-});
-
-// ==========================================
-// 2. Dark Mode Toggle with localStorage
+// 1. Dark Mode Toggle with localStorage
 // ==========================================
 const darkModeToggle = document.querySelector('.dark-mode-toggle');
 
-// Check for saved dark mode preference
 function initDarkMode() {
     const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
     if (isDarkMode) {
         document.body.classList.add('dark-mode');
-        darkModeToggle.textContent = '☀️';
-    } else {
-        darkModeToggle.textContent = '🌙';
     }
 }
 
-// Initialize dark mode on page load
 initDarkMode();
 
-// Toggle dark mode on button click
 darkModeToggle.addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
     
     const isDarkMode = document.body.classList.contains('dark-mode');
     localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
-    
-    // Update toggle icon
-    darkModeToggle.textContent = isDarkMode ? '☀️' : '🌙';
 });
 
 // ==========================================
-// 3. Smooth Scrolling for Navigation Links
+// 2. Smooth Scrolling for Navigation Links
 // ==========================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// ==========================================
+// 3. Auto-Update Year in Footer
+// ==========================================
+document.addEventListener('DOMContentLoaded', function () {
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
         if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
         }
