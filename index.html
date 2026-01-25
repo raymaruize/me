@@ -15,8 +15,8 @@
             </div>
             <ul class="navbar-menu">
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Professional Works</a></li>
-                <li><a href="#photography">Explorations</a></li>
+                <li><a href="#work">Professional Works</a></li>
+                <li><a href="#explorations">Explorations</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <!-- Dark Mode Toggle Button -->
                 <li>
@@ -51,55 +51,27 @@
             <h2>About Me</h2>
             
             <div class="about-content">
-                <div class="bio">
-                    <p>
-                        I'm an MBA Candidate at Carnegie Mellon University's Tepper School of Business 
-                        with a background in Electrical & Computer Engineering. I bring a unique blend of 
-                        technical expertise and product management acumen to drive innovation in healthcare technology.
-                    </p>
-                    <p>
-                        At uLab Systems, I've led transformative projects including migrating legacy applications 
-                        to cloud-based platforms and integrating cutting-edge 3D scanning technology into clinical workflows. 
-                        I'm passionate about leveraging modern tools—including AI—to solve real problems and improve 
-                        operational efficiency.
-                    </p>
-                    <p>
-                        Outside of work, I'm an avid soccer player, surfer, and photographer who loves capturing 
-                        moments of adventure and daily life.
-                    </p>
-                </div>
-
-                <div class="skills-section">
-                    <h3>Skills</h3>
-                    <div class="skills-grid">
-                        <span class="skill-pill">Product Management</span>
-                        <span class="skill-pill">Cloud Architecture</span>
-                        <span class="skill-pill">Healthcare Tech</span>
-                        <span class="skill-pill">Project Leadership</span>
-                        <span class="skill-pill">HTML/CSS/JavaScript</span>
-                        <span class="skill-pill">Agile Methodology</span>
-                        <span class="skill-pill">Data Analysis</span>
-                        <span class="skill-pill">Workflow Optimization</span>
-                    </div>
-                </div>
-
-                <div class="interests-section">
-                    <h3>Interests</h3>
-                    <div class="interests-grid">
-                        <!-- AI Note: Using data attributes for interaction tracking -->
-                        <button class="interest-pill" data-interest="soccer">⚽ Soccer</button>
-                        <button class="interest-pill" data-interest="surfing">🏄 Surfing</button>
-                        <button class="interest-pill" data-interest="photography">📷 Photography</button>
-                    </div>
-                    <!-- Placeholder for JS interaction message -->
-                    <div id="interest-message" class="interest-message"></div>
-                </div>
+                <p class="about-paragraph">
+                    I'm an MBA Candidate at Carnegie Mellon University's Tepper School of Business with a background in Electrical & Computer Engineering. I combine technical depth with strategic product thinking to solve complex, real-world problems in healthcare and beyond.
+                </p>
+                
+                <p class="about-paragraph">
+                    At uLab Systems, I've led transformative initiatives—from migrating legacy desktop applications to scalable cloud platforms, to integrating cutting-edge 3D scanning technology into clinical workflows. I'm passionate about building systems that improve operational efficiency and user outcomes. Explore my <a href="#work" class="about-link">Professional Work</a> to see these projects in action.
+                </p>
+                
+                <p class="about-paragraph">
+                    I lead through collaboration, thrive in uncertainty, and believe great products come from iterating with users. When I'm not building, you'll find me on the soccer field, catching waves, or capturing moments through my camera lens. Check out my <a href="#explorations" class="about-link">Explorations</a> to see what I'm learning and creating.
+                </p>
+                
+                <p class="about-paragraph">
+                    Let's connect and explore how I can contribute to your team's vision. <a href="#contact" class="about-link">Get in touch</a>.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- Professional Works Section -->
+    <section id="work" class="projects">
         <div class="container">
             <h2>Professional Works</h2>
             <div class="projects-grid">
@@ -118,6 +90,12 @@
                             smooth scrolling, and IntersectionObserver for dynamic navigation. 
                             Deployable to GitHub Pages.
                         </p>
+                        <div class="project-skills">
+                            <span class="skill-tag">Web Development</span>
+                            <span class="skill-tag">Responsive Design</span>
+                            <span class="skill-tag">Dark Mode</span>
+                            <span class="skill-tag">GitHub Pages</span>
+                        </div>
                         <div class="project-links">
                             <a href="#" class="link">View Repo</a>
                             <a href="#" class="link">Live Site</a>
@@ -139,6 +117,12 @@
                             reduced deployment time, and enhanced user accessibility across multiple 
                             clinical sites.
                         </p>
+                        <div class="project-skills">
+                            <span class="skill-tag">Product Strategy</span>
+                            <span class="skill-tag">Cloud Platform</span>
+                            <span class="skill-tag">Stakeholder Management</span>
+                            <span class="skill-tag">System Architecture</span>
+                        </div>
                         <div class="project-links">
                             <a href="https://www.ulabsystems.com/" class="link" target="_blank">Company Site</a>
                         </div>
@@ -159,6 +143,12 @@
                             clinical data ingestion workflows. Enhanced accuracy and reduced 
                             turnaround time for patient diagnostics.
                         </p>
+                        <div class="project-skills">
+                            <span class="skill-tag">Integration</span>
+                            <span class="skill-tag">Workflow Design</span>
+                            <span class="skill-tag">User Research</span>
+                            <span class="skill-tag">Clinical Workflows</span>
+                        </div>
                         <div class="project-links">
                             <a href="https://www.ulabsystems.com/" class="link" target="_blank">Company Site</a>
                         </div>
@@ -179,6 +169,12 @@
                             The tool enables sales representatives to quickly access product 
                             specifications and competitive insights.
                         </p>
+                        <div class="project-skills">
+                            <span class="skill-tag">AI Integration</span>
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">Product Design</span>
+                            <span class="skill-tag">Process Optimization</span>
+                        </div>
                         <div class="project-links">
                             <a href="#" class="link">Case Study</a>
                         </div>
@@ -189,17 +185,15 @@
         </div>
     </section>
 
-    <!-- Photography Section -->
-    <section id="photography" class="photography">
+    <!-- Explorations Section -->
+    <section id="explorations" class="explorations">
         <div class="container">
             <h2>Explorations</h2>
             <p class="section-intro">
-                I love capturing moments through my lens—whether it's the action on the soccer field, 
-                the thrill of the waves, or the quiet beauty of everyday travel moments. Photography 
-                is my creative outlet and a way to share the world as I see it.
+                Photography, soccer, surfing—these are more than hobbies. They're how I learn resilience, see from new perspectives, and capture the world around me.
             </p>
             
-            <div class="photography-content">
+            <div class="explorations-content">
                 <div class="instagram-placeholder">
                     <p>Instagram Screenshot Placeholder</p>
                 </div>
@@ -227,7 +221,7 @@
                 </div>
             </div>
             
-            <p class="photo-credit">All photos are by me unless otherwise stated.</p>
+            <p class="exploration-credit">All photos are by me unless otherwise stated.</p>
         </div>
     </section>
 

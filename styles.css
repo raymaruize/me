@@ -260,34 +260,35 @@ body.dark-mode .btn-secondary {
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.about-text p {
+.about-paragraph {
     font-size: 1.1rem;
     color: var(--text-light);
-    margin-bottom: 1.5rem;
     line-height: 1.8;
 }
 
-.about-skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
+.about-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+    border-bottom: 1px solid transparent;
 }
 
-.skill-tag {
-    background-color: var(--bg-color);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.95rem;
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    transition: var(--transition);
+.about-link:hover {
+    opacity: 0.7;
+    border-bottom-color: var(--accent-color);
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
 }
 
 .hero-image {
@@ -387,6 +388,28 @@ body.dark-mode .btn-secondary {
     gap: 1rem;
 }
 
+.project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.skill-tag {
+    background-color: var(--bg-color);
+    padding: 0.4rem 0.9rem;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.skill-tag:hover {
+    border-color: var(--accent-color);
+    background-color: var(--bg-secondary);
+}
+
 .project-link {
     color: var(--accent-color);
     text-decoration: none;
@@ -400,14 +423,14 @@ body.dark-mode .btn-secondary {
 }
 
 /* ====================
-   Photography Section
+   Explorations Section
    ==================== */
-.photography {
+.explorations {
     padding: 100px 2rem;
     background-color: var(--bg-secondary);
 }
 
-.photography-content {
+.explorations-content {
     max-width: 980px;
     margin: 0 auto;
 }
@@ -532,7 +555,7 @@ footer a:hover {
     }
 
     .about-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
     .hero-buttons {
@@ -590,7 +613,6 @@ footer a:hover {
     .dark-mode-toggle {
         margin-left: auto;
     }
-}
 }
 
 .form-group {
