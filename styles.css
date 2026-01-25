@@ -333,8 +333,8 @@ body.dark-mode .btn-secondary {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
     max-width: 980px;
     margin: 0 auto;
 }
@@ -347,10 +347,10 @@ body.dark-mode .btn-secondary {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--border-color);
+    padding: 2rem;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
     border-color: var(--accent-color);
 }
 
@@ -367,23 +367,24 @@ body.dark-mode .btn-secondary {
 }
 
 .project-content {
-    padding: 1.5rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
 .project-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    line-height: 1.4;
 }
 
 .project-meta {
     font-size: 0.85rem;
     color: var(--accent-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     font-weight: 500;
+    opacity: 0.85;
 }
 
 .project-content p {
@@ -391,6 +392,7 @@ body.dark-mode .btn-secondary {
     margin-bottom: 1.5rem;
     flex-grow: 1;
     font-size: 1rem;
+    line-height: 1.7;
 }
 
 .project-links {
@@ -402,7 +404,7 @@ body.dark-mode .btn-secondary {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
-    margin: 1.5rem 0;
+    margin-top: 0.5rem;
 }
 
 .skill-tag {
