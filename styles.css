@@ -608,7 +608,7 @@ body.dark-mode .btn-secondary {
 }
 
 .contact-container {
-    max-width: 700px;
+    max-width: 820px;
     margin: 0 auto;
     text-align: center;
 }
@@ -616,38 +616,83 @@ body.dark-mode .btn-secondary {
 .contact h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     letter-spacing: -0.01em;
 }
 
 .contact-description {
     font-size: 1.1rem;
     color: var(--text-light);
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     line-height: 1.8;
 }
 
-.contact-links {
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0 auto;
+}
+
+.contact-card {
     display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.contact-link {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: var(--transition);
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    border: 1px solid transparent;
-}
-
-.contact-link:hover {
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
     background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
     border-color: var(--accent-color);
+    background-color: var(--bg-color);
+}
+
+body.dark-mode .contact-card:hover {
+    background-color: var(--secondary-color);
+}
+
+.contact-icon {
+    font-size: 1.75rem;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+}
+
+.contact-card-text {
+    text-align: left;
+    flex: 1;
+}
+
+.contact-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.contact-value {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    word-break: break-word;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .contact-card {
+        padding: 1.25rem;
+    }
 }
 
 /* ====================
