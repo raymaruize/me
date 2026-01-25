@@ -437,6 +437,10 @@ body.dark-mode .btn-secondary {
     background-color: var(--bg-secondary);
 }
 
+.section-intro {
+    margin-bottom: 3rem;
+}
+
 .explorations-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -449,6 +453,18 @@ body.dark-mode .btn-secondary {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.exploration-text {
+    text-align: center;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .exploration-text h3 {
@@ -462,12 +478,14 @@ body.dark-mode .btn-secondary {
     font-size: 0.95rem;
     color: var(--text-light);
     line-height: 1.7;
+    max-width: 100%;
 }
 
 .carousel {
     display: flex;
     align-items: center;
     gap: 1rem;
+    justify-content: center;
     position: relative;
     padding-bottom: 3.5rem;
 }
@@ -494,8 +512,8 @@ body.dark-mode .btn-secondary {
 }
 
 .carousel-viewport {
-    flex: 1;
-    aspect-ratio: 1;
+    width: 280px;
+    height: 280px;
     overflow: hidden;
     background-color: var(--bg-secondary);
     border-radius: 8px;
