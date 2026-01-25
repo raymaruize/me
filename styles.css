@@ -437,68 +437,75 @@ body.dark-mode .btn-secondary {
     background-color: var(--bg-secondary);
 }
 
-.section-intro {
-    margin-bottom: 3rem;
+#explorations .section-intro {
+    margin-bottom: 28px;
 }
 
-.explorations-content {
+#explorations .explorations-content {
+    margin-top: 8px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     max-width: 1100px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.exploration-block {
+#explorations .exploration-block {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     background-color: var(--bg-secondary);
     border-radius: 12px;
-    padding: 2rem;
+    padding: 18px 18px 22px 18px;
     border: 1px solid var(--border-color);
 }
 
-.exploration-text {
+#explorations .exploration-text {
     text-align: center;
-    min-height: 140px;
+    max-width: 520px;
+    margin: 0 auto 18px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.exploration-text h3 {
+@media (min-width: 900px) {
+    #explorations .exploration-text {
+        min-height: 210px;
+    }
+}
+
+#explorations .exploration-text h3 {
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
     line-height: 1.4;
 }
 
-.exploration-text p {
+#explorations .exploration-text p {
     font-size: 0.95rem;
     color: var(--text-light);
     line-height: 1.7;
-    max-width: 100%;
 }
 
-.carousel {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
+#explorations .carousel {
     position: relative;
-    padding-bottom: 3.5rem;
+    display: grid;
+    grid-template-columns: 44px 1fr 44px;
+    align-items: center;
+    gap: 12px;
 }
 
-.carousel-btn {
-    background: none;
-    border: 1px solid var(--border-color);
+#explorations .carousel-btn {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 999px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: none;
+    border: 1px solid var(--border-color);
     cursor: pointer;
     color: var(--text-color);
     font-size: 1.3rem;
@@ -506,40 +513,39 @@ body.dark-mode .btn-secondary {
     flex-shrink: 0;
 }
 
-.carousel-btn:hover {
+#explorations .carousel-btn:hover {
     border-color: var(--accent-color);
     color: var(--accent-color);
 }
 
-.carousel-viewport {
-    width: 280px;
-    height: 280px;
+#explorations .carousel-viewport {
+    width: 100%;
+    height: 340px;
     overflow: hidden;
-    background-color: var(--bg-secondary);
-    border-radius: 8px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--bg-secondary);
 }
 
-.carousel-image {
+#explorations .carousel-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     transition: opacity 0.3s ease;
 }
 
-.carousel-dots {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+#explorations .carousel-dots {
+    grid-column: 1 / -1;
     display: flex;
-    gap: 0.5rem;
     justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
 }
 
-.carousel-dot {
+#explorations .carousel-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -548,16 +554,24 @@ body.dark-mode .btn-secondary {
     transition: all 0.2s ease;
 }
 
-.carousel-dot.active {
+#explorations .carousel-dot.active {
     background-color: var(--accent-color);
     width: 24px;
     border-radius: 4px;
 }
 
 @media (max-width: 768px) {
-    .explorations-content {
+    #explorations .explorations-content {
         grid-template-columns: 1fr;
         gap: 2.5rem;
+    }
+    
+    #explorations .exploration-text {
+        min-height: auto;
+    }
+    
+    #explorations .carousel-viewport {
+        height: 300px;
     }
 }
 
