@@ -616,83 +616,47 @@ body.dark-mode .btn-secondary {
 .contact h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     letter-spacing: -0.01em;
 }
 
 .contact-description {
     font-size: 1.1rem;
     color: var(--text-light);
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     line-height: 1.8;
 }
 
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    gap: 28px 48px;
+    max-width: 720px;
     margin: 0 auto;
-}
-
-.contact-card {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    padding: 1.5rem;
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    text-decoration: none;
-    color: var(--text-color);
-    transition: var(--transition);
-}
-
-.contact-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent-color);
-    background-color: var(--bg-color);
-}
-
-body.dark-mode .contact-card:hover {
-    background-color: var(--secondary-color);
-}
-
-.contact-icon {
-    font-size: 1.75rem;
-    min-width: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent-color);
-}
-
-.contact-card-text {
-    text-align: left;
-    flex: 1;
-}
-
-.contact-label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text-color);
-    margin-bottom: 0.25rem;
-}
-
-.contact-value {
-    font-size: 0.95rem;
-    color: var(--text-light);
-    word-break: break-word;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 24px;
     }
-    
-    .contact-card {
-        padding: 1.25rem;
-    }
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.contact-link {
+    font-size: 1.05rem;
+    font-weight: 500;
 }
 
 /* ====================
