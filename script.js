@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
-});
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
+    
+    // Initialize all carousels
+    Object.keys(carouselData).forEach(carouselId => {
+        initCarousel(carouselId);
     });
 });
 
@@ -84,6 +84,90 @@ const observer = new IntersectionObserver(function (entries) {
 }, observerOptions);
 
 sections.forEach(section => observer.observe(section));
+
+// ==========================================
+// 4. Carousel Functionality
+// ==========================================
+
+const carouselData = {
+    cooking: {
+        images: Array.from({ length: 5 }, (_, i) => `assets/explorations/cooking/${String(i + 1).padStart(2, '0')}.jpg`)
+    },
+    soccer: {
+        images: Array.from({ length: 5 }, (_, i) => `assets/explorations/soccer/${String(i + 1).padStart(2, '0')}.jpg`)
+    },
+    surfing: {
+        images: Array.from({ length: 5 }, (_, i) => `assets/explorations/surfing/${String(i + 1).padStart(2, '0')}.jpg`)
+    },
+    photography: {
+        images: Array.from({ length: 5 }, (_, i) => `assets/explorations/photography/${String(i + 1).padStart(2, '0')}.jpg`)
+    }
+};
+
+const carouselStates = {};
+
+function initCarousel(carouselId) {
+    const carousel = document.querySelector(`[data-carousel-id="${carouselId}"]`);
+    if (!carousel) return;
+
+    const images = carouselData[carouselId]?.images || [];
+    if (images.length === 0) return;
+
+    carouselStates[carouselId] = { currentIndex: 0, totalImages: images.length };
+
+    const imageElement = carousel.querySelector('.carousel-image');
+    const dotsContainer = carousel.querySelector('.carousel-dots');
+    const prevBtn = carousel.querySelector('.carousel-btn.prev');
+    const nextBtn = carousel.querySelector('.carousel-btn.next');
+
+    imageElement.src = images[0];
+    imageElement.alt = `${carouselId} image 1`;
+
+    for (let i = 0; i < images.length; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goToSlide(carouselId, i));
+        dotsContainer.appendChild(dot);
+    }
+
+    prevBtn.addEventListener('click', () => previousSlide(carouselId));
+    nextBtn.addEventListener('click', () => nextSlide(carouselId));
+}
+
+function updateCarousel(carouselId) {
+    const state = carouselStates[carouselId];
+    if (!state) return;
+
+    const carousel = document.querySelector(`[data-carousel-id="${carouselId}"]`);
+    const imageElement = carousel.querySelector('.carousel-image');
+    const images = carouselData[carouselId].images;
+
+    imageElement.src = images[state.currentIndex];
+    imageElement.alt = `${carouselId} image ${state.currentIndex + 1}`;
+
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === state.currentIndex);
+    });
+}
+
+function nextSlide(carouselId) {
+    const state = carouselStates[carouselId];
+    state.currentIndex = (state.currentIndex + 1) % state.totalImages;
+    updateCarousel(carouselId);
+}
+
+function previousSlide(carouselId) {
+    const state = carouselStates[carouselId];
+    state.currentIndex = (state.currentIndex - 1 + state.totalImages) % state.totalImages;
+    updateCarousel(carouselId);
+}
+
+function goToSlide(carouselId, index) {
+    const state = carouselStates[carouselId];
+    state.currentIndex = index;
+    updateCarousel(carouselId);
+}
 
 // ==========================================
 // 5. Interest Pills Interaction
