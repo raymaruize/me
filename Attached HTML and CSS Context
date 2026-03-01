@@ -1,0 +1,232 @@
+Attached HTML and CSS Context
+
+<div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-intro">
+                I'm always interested in connecting with like-minded professionals. 
+                Feel free to reach out!
+            </p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <a href="mailto:your.email@example.com">your.email@example.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/ruize-ma/" target="_blank">linkedin.com/in/ruize-ma</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/raymaruize" target="_blank">github.com/raymaruize</a>
+                    </div>
+                </div>
+
+                <!-- Optional Contact Form with Client-Side Validation -->
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required=""></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p id="form-status" class="form-status"></p>
+                </form>
+            </div>
+        </div>
+
+
+/* Matched Rule from user-agent */
+div {
+  display: block;
+}
+
+/* Matched Rule from user-agent */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Matched Rule from regular */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  box-sizing: border-box;
+}
+
+/* Matched Rule from regular */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 980px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  padding-top: 0px;
+  padding-right: 2rem;
+  padding-bottom: 0px;
+  padding-left: 2rem;
+}
+
+/* Inherited from ancestor level 1 (user-agent) */
+article, aside, footer, header, hgroup, main, nav, search, section {
+  display: block;
+}
+
+/* Inherited from ancestor level 1 (user-agent) */
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
+  unicode-bidi: isolate;
+}
+
+/* Inherited from ancestor level 1 (regular) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  box-sizing: border-box;
+}
+
+/* Inherited from ancestor level 1 (regular) */
+.contact {
+  padding: 100px 2rem;
+  background-color: var(--bg-color);
+  padding-top: 100px;
+  padding-right: 2rem;
+  padding-bottom: 100px;
+  padding-left: 2rem;
+  background-color: var(--bg-color);
+}
+
+/* Inherited from ancestor level 2 (user-agent) */
+body {
+  display: block;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+}
+
+/* Inherited from ancestor level 2 (regular) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  box-sizing: border-box;
+}
+
+/* Inherited from ancestor level 2 (regular) */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+  transition-behavior: normal, normal;
+  transition-duration: 0.3s, 0.3s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s;
+  transition-property: background-color, color;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Inherited from ancestor level 3 (user-agent) */
+html {
+  display: block;
+}
+
+/* Inherited from ancestor level 3 (user-agent) */
+:root {
+  view-transition-name: root;
+}
+
+/* Inherited from ancestor level 3 (regular) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  box-sizing: border-box;
+}
+
+/* Inherited from ancestor level 3 (regular) */
+html {
+  scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+/* Inherited from ancestor level 3 (regular) */
+:root {
+  --primary-color: #000;
+  --secondary-color: #1d1d1f;
+  --accent-color: #0071e3;
+  --accent-hover: #0077ed;
+  --text-color: #1d1d1f;
+  --text-light: #86868b;
+  --bg-color: #ffffff;
+  --bg-secondary: #f5f5f7;
+  --border-color: #e5e5e7;
+  --navbar-bg: rgba(255, 255, 255, 0.8);
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --primary-color: #000;
+  --secondary-color: #1d1d1f;
+  --accent-color: #0071e3;
+  --accent-hover: #0077ed;
+  --text-color: #1d1d1f;
+  --text-light: #86868b;
+  --bg-color: #ffffff;
+  --bg-secondary: #f5f5f7;
+  --border-color: #e5e5e7;
+  --navbar-bg: rgba(255, 255, 255, 0.8);
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
