@@ -342,6 +342,12 @@ body.dark-mode .btn-secondary {
 
 #personal-projects {
     background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+#personal-projects .project-card {
+    background-color: var(--bg-color);
 }
 
 .projects-grid {
@@ -447,7 +453,7 @@ body.dark-mode .btn-secondary {
    ==================== */
 .explorations {
     padding: 100px 2rem;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-color);
 }
 
 #explorations .section-intro {
